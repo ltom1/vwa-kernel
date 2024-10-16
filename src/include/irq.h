@@ -1,0 +1,18 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////
+/// @file
+/// @brief  Contains type definitions for all things related to the hardware Interrupt Requests.
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+#pragma once
+
+
+#include <types.h>
+#include <isr.h>
+
+
+#define MAX_IRQ    16
+
+
+void irq_add(u8 irq, isr_t handler);
+
+extern void irq_handler(int_args_t *args);
